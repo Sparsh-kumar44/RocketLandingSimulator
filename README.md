@@ -7,7 +7,7 @@ The project combines real-time simulation, reinforcement learning, reward engine
 
 <!-- Replace this with a real screenshot or GIF -->
 <p align="center">
-  <img width="1292" height="1500" alt="Screenshot 2026-10-24 085229" src="https://github.com/user-attachments/assets/ff5cd660-56af-4ed7-a753-99750a9312fb" />
+  <img width="860" height="1000" alt="Recording 2026-10-24 085127" src="https://github.com/user-attachments/assets/fb3b5cf5-570a-4cb8-8774-3bdd1a9f278c" />
 </p>
 
 <p align="center">
@@ -151,8 +151,7 @@ Rocket Environment
 
 ## 📸 Results
 
-<img width="1194" height="1054" alt="image" src="https://github.com/user-attachments/assets/da71cc9e-8568-41dd-a604-431c894b512e" />
-<img width="1298" height="1500" alt="Recording 2026-10-24 085127" src="https://github.com/user-attachments/assets/fb3b5cf5-570a-4cb8-8774-3bdd1a9f278c" />
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/da71cc9e-8568-41dd-a604-431c894b512e" />
 
 ## 🔮 Future Improvements
 

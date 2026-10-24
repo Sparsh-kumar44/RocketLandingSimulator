@@ -71,6 +71,10 @@ def update(rocket):
         rocket.x = WIDTH - half_width
         rocket.vx = 0
 
+    if rocket.y < ROCKET_HEIGHT / 2:
+        rocket.y = ROCKET_HEIGHT / 2
+        rocket.vy = max(rocket.vy, 0)
+
     ground_y = HEIGHT - GROUND_HEIGHT
     rocket_bottom = rocket.y + ROCKET_HEIGHT / 2
 

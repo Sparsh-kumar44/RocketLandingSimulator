@@ -1,7 +1,8 @@
 import math
 
-ROTATION_SPEED = math.radians(0.5)
-ROTATION_DAMPING = 0.97
+
+ROTATION_SPEED = math.radians(0.2)
+ROTATION_DAMPING = 0.85
 MAX_ANGLE = math.radians(90)
 
 WIDTH = 650

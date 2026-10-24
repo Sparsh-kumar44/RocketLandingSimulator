@@ -8,14 +8,16 @@ from src.model import DQN
 from src.memory import ReplayMemory
 
 
+EXPLORE_WEIGHTS = [0.65 / 3, 0.35 / 3, 0.65 / 3, 0.65 / 3, 0.35 / 3, 0.35 / 3]
+
+
 class Agent:
     def __init__(self):
         self.gamma = 0.99
 
-        # Keep exploration alive for longer; early policies are usually poor.
         self.epsilon = 0.99
         self.epsilon_min = 0.05
-        self.epsilon_decay = 0.9995
+        self.epsilon_decay = 0.997
 
         self.batch_size = 128
         self.tau = 0.005
@@ -26,13 +28,13 @@ class Agent:
         self.target_net.load_state_dict(self.policy_net.state_dict())
         self.target_net.eval()
 
-        self.memory = ReplayMemory(50000)
-        self.optimizer = optim.Adam(self.policy_net.parameters(), lr=3e-4)
+        self.memory = ReplayMemory(100000)
+        self.optimizer = optim.Adam(self.policy_net.parameters(), lr=2.5e-4)
         self.loss_fn = nn.SmoothL1Loss()
 
     def select_action(self, state):
         if random.random() < self.epsilon:
-            return random.randrange(6)
+            return random.choices(range(6), weights=EXPLORE_WEIGHTS)[0]
 
         state_tensor = torch.as_tensor(
             state, dtype=torch.float32, device=self.device
@@ -58,9 +60,7 @@ class Agent:
         dones = torch.as_tensor(dones, dtype=torch.float32, device=self.device).unsqueeze(1)
 
         current_q = self.policy_net(states).gather(1, actions)
-
-        # Double DQN: policy network selects the next action; target network
-        # evaluates it. This tends to reduce overestimation of Q-values.
+        
         with torch.no_grad():
             next_actions = self.policy_net(next_states).argmax(dim=1, keepdim=True)
             next_q = self.target_net(next_states).gather(1, next_actions)

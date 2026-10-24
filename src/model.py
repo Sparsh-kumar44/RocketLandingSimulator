@@ -9,13 +9,13 @@ class DQN(nn.Module):
 
         self.network = nn.Sequential(
 
-            nn.Linear(7, 64),
+            nn.Linear(7, 128),
             nn.ReLU(),
 
-            nn.Linear(64, 64),
+            nn.Linear(128, 128),
             nn.ReLU(),
 
-            nn.Linear(64, 6)
+            nn.Linear(128, 6)
 
         )
 

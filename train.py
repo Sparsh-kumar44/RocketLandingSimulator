@@ -86,11 +86,12 @@ def train(episodes=EPISODES, save_path=MODEL_PATH):
             and level_count == PROMOTE_WINDOW
             and level_rate >= PROMOTE_RATE
         ):
-            difficulty = min(1.0, round(difficulty + DIFFICULTY_STEP, 2))
+            difficulty = min(1.0, round(difficulty +
+             DIFFICULTY_STEP, 2))
             level_landings.clear()
             print(f"--- Difficulty raised to {difficulty:.1f} ---")
 
-        if difficulty >= 1.0 and (episode + 1) % EVAL_EVERY == 0:
+        if difficulty == 1.0 and (episode + 1) % EVAL_EVERY == 0:
             eval_rate = evaluate(agent)
             message = f"--- Test flights: {100 * eval_rate:.0f}% landed"
             if eval_rate > best_full_rate:

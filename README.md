@@ -1,3 +1,4 @@
+
 # 🚀 Rocket Landing Simulator — Deep Q-Learning
 
 A 2D rocket landing simulator built with **Python, Pygame, and PyTorch**, featuring custom physics and a Deep Q-Network (DQN) agent trained to learn controlled rocket landings.
@@ -6,7 +7,7 @@ The project combines real-time simulation, reinforcement learning, reward engine
 
 <!-- Replace this with a real screenshot or GIF -->
 <p align="center">
-  <img src="assets/screenshots/simulator.png" alt="Rocket Landing Simulator" width="700">
+  <img width="860" height="1000" alt="Recording 2026-10-24 085127" src="https://github.com/user-attachments/assets/fb3b5cf5-570a-4cb8-8774-3bdd1a9f278c" />
 </p>
 
 <p align="center">
@@ -150,9 +151,7 @@ Rocket Environment
 
 ## 📸 Results
 
-Add screenshots and a short GIF showing the simulator and the trained agent in action.
-
-Once training experiments are complete, include measured results such as landing success rate, average reward, and crash rate. Avoid reporting unmeasured performance figures.
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/da71cc9e-8568-41dd-a604-431c894b512e" />
 
 ## 🔮 Future Improvements
 

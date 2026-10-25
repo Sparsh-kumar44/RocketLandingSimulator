@@ -161,6 +161,3 @@ Rocket Environment
 - Visualize the learned landing policy.
 - Record training and inference demonstrations.
 
-## 📄 License
-
-This project is distributed under the license specified in the repository's `LICENSE` file.
